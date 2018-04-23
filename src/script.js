@@ -11,33 +11,33 @@ function bubbleChart() {
     var center = { x: width / 2, y: height / 1.9 };
 
     var nodeCenters = {
-        "Europe": { x: width / 1.65, y: height / 5 * 1.25 },
-        "Africa": { x: width / 1.65, y: height / 5 * 2.3 },
-        "North America": { x: width / 1.65, y: height / 5 * 3.2 },
-        "South America": { x: width / 1.65, y: height / 5 * 4.0 },
-        "Asia": { x: width / 1.65, y: height / 5 * 4.0 },
-        "Oceania": { x: width / 1.65, y: height / 5 * 4.0 }
+        "Europe": { x: width / 2, y: height / 3 },
+        "Africa": { x: width / 2, y: height / 1.5 },
+        "North America": { x: width / 3, y: height / 3 },
+        "South America": { x: width / 3, y: height / 1.5 },
+        "Asia": { x: width / 1.5, y: height / 3 },
+        "Oceania": { x: width / 1.5, y: height / 1.5 }
     };
 
     console.log(nodeCenters);
 
       // y locations of the year titles. nb html markup doesn't work
     var changesTitleY = {
-        "North America": height / 2,
-        "South America": height / 2,
-        "Asia": height / 2,
-        "Africa": height / 2,
-        "Europe": height / 2,
-        "Oceania": height / 2
+        "North America": height / 3,
+        "South America": height / 1.5,
+        "Asia": height / 3,
+        "Africa": height / 1.5,
+        "Europe": height / 3,
+        "Oceania": height / 1.5
     };
 
     var changesTitleX = {
-        "North America": width / 2,
-        "South America": width / 2,
-        "Asia": width / 2,
+        "North America": width / 3,
+        "South America": width / 3,
+        "Asia": width / 1.5,
         "Africa": width / 2,
         "Europe": width / 2,
-        "Oceania": width / 2
+        "Oceania": width / 1.5
     };
 
     var forceStrength = 0.07;
@@ -108,13 +108,13 @@ function bubbleChart() {
         var bubblesE = bubbles.enter().append('circle')
         .classed('bubble', true)
         .attr('fill', function (d) { return fillColor(d.group); })
-        .attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
+        //.attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
         .attr('r', 0)  // initial radius zero to allow transition
         .attr('class', function(d) { 
           return "bubble " + d.group 
         })
-        .attr('stroke', function (d) { return d3.rgb(fillColor(d.group)); })
-        .attr('stroke-width', 2)
+        .attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
+        .attr('stroke-width', 1)
         .on('mouseover', mouseover)
         .on('mouseout', mouseout)
         .call(d3.drag()
@@ -149,7 +149,7 @@ function bubbleChart() {
 
         simulation.nodes(nodes);
 
-        groupBubbles();
+        splitBubbles();
         
 
     }
@@ -174,18 +174,9 @@ function bubbleChart() {
         return nodeCenters[d.group].x;
         }
 
-        function groupBubbles() {
-    
-            // @v4 Reset the 'y' force to draw the bubbles to the center.
-            simulation.force('y', d3.forceY().strength(forceStrength).y(center.y));
-        
-            simulation.force('x', d3.forceX().strength(forceStrength).x(center.x));
-        
-            // @v4 We can reset the alpha value and restart the simulation
-            simulation.alpha(1).restart();
-        }
-
         function splitBubbles() {
+
+            showChangeTitles();
 
                     // @v4 Reset the 'y' force to draw the bubbles to their year centers
             simulation.force('y', d3.forceY().strength(forceStrength).y(nodePosY));
@@ -194,6 +185,21 @@ function bubbleChart() {
 
             // @v4 We can reset the alpha value and restart the simulation
             simulation.alpha(1).restart();
+        }
+
+        function showChangeTitles() {
+            // Another way to do this would be to create
+            // the change texts once and then just hide them.
+            var changesData = d3.keys(changesTitleY);
+            var changes = svg.selectAll('.change')
+              .data(changesData);
+        
+            changes.enter().append('text')
+              .attr('class', 'change')
+              .attr('x', function (d) { return changesTitleX[d]; })
+              .attr('y', function (d) { return changesTitleY[d]; })
+              .attr('text-anchor', 'left')
+              .text(function (d) { return d; });
         }
 
 
@@ -241,12 +247,3 @@ function display(error, data) {
 
 // Load the data.
 d3.csv('data/authors.csv', display);
-
-
-
-// function initialTransition () {
-//     $("#cluster").val('change').prop('selected', true);
-//     //d3.select("#all").classed('active', false);
-//     myBubbleChart.toggleDisplay("change");
-//     setTimeout(viewToolbar, 300);
-//   }
