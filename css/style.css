@@ -40,6 +40,18 @@ p {
   font-weight:bold;
 }
 
+.change {
+    font-family: PT Sans;
+    color: #333333;
+    pointer-events: none;
+}
+
+.label {
+    font: 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
 h3 {
     font-family: PT Sans Narrow;
     font-weight: bold;

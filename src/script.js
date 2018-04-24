@@ -11,33 +11,33 @@ function bubbleChart() {
     var center = { x: width / 2, y: height / 1.9 };
 
     var nodeCenters = {
-        "Europe": { x: width / 2, y: height / 3 },
-        "Africa": { x: width / 2, y: height / 1.5 },
-        "North America": { x: width / 3, y: height / 3 },
-        "South America": { x: width / 3, y: height / 1.5 },
-        "Asia": { x: width / 1.5, y: height / 3 },
-        "Oceania": { x: width / 1.5, y: height / 1.5 }
+        "Europe": { x: width / 2, y: height / 3.4 },
+        "Africa": { x: width / 1.9, y: height / 1.9 },
+        "North America": { x: width / 4.2, y: height / 3.4 },
+        "South America": { x: width / 3, y: height / 1.9 },
+        "Asia": { x: width / 1.4, y: height / 3.4 },
+        "Oceania": { x: width / 1.23, y: height / 1.88 }
     };
 
     console.log(nodeCenters);
 
       // y locations of the year titles. nb html markup doesn't work
     var changesTitleY = {
-        "North America": height / 3,
-        "South America": height / 1.5,
-        "Asia": height / 3,
-        "Africa": height / 1.5,
-        "Europe": height / 3,
-        "Oceania": height / 1.5
+        "North America": height / 6.5,
+        "South America": height / 2.1,
+        "Asia": height / 6.5,
+        "Africa": height / 2.1,
+        "Europe": height / 6.5,
+        "Oceania": height / 2.1
     };
 
     var changesTitleX = {
-        "North America": width / 3,
+        "North America": width / 4.25,
         "South America": width / 3,
-        "Asia": width / 1.5,
-        "Africa": width / 2,
+        "Asia": width / 1.37,
+        "Africa": width / 1.9,
         "Europe": width / 2,
-        "Oceania": width / 1.5
+        "Oceania": width / 1.2
     };
 
     var forceStrength = 0.07;
@@ -63,7 +63,7 @@ function bubbleChart() {
 
     var fillColor = d3.scaleOrdinal()
     .domain(['North America', 'South America', 'Asia', 'Europe', 'Oceania', 'Africa'])
-    .range(['#A14A7b', '#EFC530', "#999999", "#0b4572", "#2f8fce", "#C7432B" ]);
+    .range(['#A14A7b', '#EFC530', "#dd8a3e", "#0b4572", "#2f8fce", "#C7432B" ]);
 
     function createNodes(rawData) {
 
@@ -147,9 +147,17 @@ function bubbleChart() {
         .duration(2000)
         .attr('r', function (d) { return d.radius; });
 
+        function addLabels (d) {
+            bubbles.append("text")
+            .text(function(d) { return d.country; })
+            .style("font-size", function(d) { return Math.min(2 * d.radius, (2 * d.radius - 8) / this.getComputedTextLength() * 24) + "px"; })
+            .attr("dy", ".35em");
+        }
+
         simulation.nodes(nodes);
 
         splitBubbles();
+        setTimeout(addLabels(), 2500);
         
 
     }
@@ -185,6 +193,7 @@ function bubbleChart() {
 
             // @v4 We can reset the alpha value and restart the simulation
             simulation.alpha(1).restart();
+
         }
 
         function showChangeTitles() {
@@ -198,7 +207,7 @@ function bubbleChart() {
               .attr('class', 'change')
               .attr('x', function (d) { return changesTitleX[d]; })
               .attr('y', function (d) { return changesTitleY[d]; })
-              .attr('text-anchor', 'left')
+              .attr('text-anchor', 'middle')
               .text(function (d) { return d; });
         }
 
