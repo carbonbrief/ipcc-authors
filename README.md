@@ -1,3 +1,1 @@
-# ipcc-authors
-
-*work in progress, please do not share*
+# Where do IPCC authors come from?
