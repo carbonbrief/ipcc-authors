@@ -11,24 +11,24 @@ function bubbleChart() {
     var center = { x: width / 2, y: height / 1.9 };
 
     var nodeCenters = {
-        "Europe": { x: width / 2, y: height / 3.4 },
-        "Africa": { x: width / 1.9, y: height / 1.9 },
-        "North America": { x: width / 4.2, y: height / 3.4 },
-        "South America": { x: width / 3, y: height / 1.9 },
-        "Asia": { x: width / 1.4, y: height / 3.4 },
-        "Oceania": { x: width / 1.23, y: height / 1.88 }
+        "Europe": { x: width / 2, y: height / 3.7 },
+        "Africa": { x: width / 1.9, y: height / 2 },
+        "North America": { x: width / 4.2, y: height / 3.7 },
+        "South America": { x: width / 3, y: height / 2 },
+        "Asia": { x: width / 1.4, y: height / 3.7 },
+        "Oceania": { x: width / 1.23, y: height / 1.9 }
     };
 
     console.log(nodeCenters);
 
       // y locations of the year titles. nb html markup doesn't work
     var changesTitleY = {
-        "North America": height / 6.5,
-        "South America": height / 2.1,
-        "Asia": height / 6.5,
-        "Africa": height / 2.1,
-        "Europe": height / 6.5,
-        "Oceania": height / 2.1
+        "North America": height / 8,
+        "South America": height / 2.15,
+        "Asia": height / 8,
+        "Africa": height / 2.15,
+        "Europe": height / 8,
+        "Oceania": height / 2.15
     };
 
     var changesTitleX = {

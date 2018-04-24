@@ -1,88 +1,91 @@
 country,count,continent
-Algeria,6,Africa
-Argentina,11,South America
-Australia,38,Oceania
-Austria,7,Europe
-Bahamas,1,North America
-Bangladesh,3,Asia
-Belgium,5,Europe
-Benin,1,Africa
-Botswana,1,Africa
-Brazil,20,South America
-Cameroon,1,Africa
-Canada,21,North America
-Chile,8,South America
+US,74,North America
+Germany,45,Europe
+UK,45,Europe
+Australia,37,Oceania
 China,37,Asia
-Colombia,3,South America
-Cook Islands,1,Oceania
-Costa Rica,1,North America
-Cuba,6,North America
-Czech Republic,2,Europe
-Denmark,4,Europe
-Dominican Republic,2,North America
-Ecuador,2,South America
-Egypt,2,Africa
-Eritrea,1,Africa
-Ethiopia,5,Africa
-Finland,4,Europe
-France,19,Europe
-Gambia,1,Africa
-Germany,46,Europe
-Ghana,5,Africa
-Greece,3,Europe
-Guatemala,1,North America
-Hungary,2,Europe
-Iceland,1,Europe
-India,31,Asia
-Indonesia,9,Asia
-Iran,4,Asia
-Ireland,2,Europe
-Israel,1,Asia
-Italy,13,Europe
-Jamaica,6,North America
-Japan,31,Asia
-Kenya,2,Africa
-Madagascar,1,Africa
-Malaysia,5,Asia
-Maldives,3,Asia
-Mauritania,1,Africa
-Mexico,14,North America
-Morocco,7,Africa
-Mozambique,1,Africa
-Nepal,2,Asia
-Netherlands,16,Europe
-New Zealand,14,Oceania
-Nigeria,7,Africa
-Norway,13,Europe
-Pakistan,6,Asia
-Palau,1,Oceania
-Peru,4,South America
-Philippines,5,Asia
-Poland,3,Europe
-Portugal,2,Europe
-South Korea,11,Asia
-Romania,1,Europe
-Russia,12,Asia
-Saudi Arabia,3,Asia
-Senegal,6,Africa
-Singapore,2,Asia
-Solomon Islands,1,Oceania
-South Africa,15,Africa
+India,32,Asia
+Japan,32,Asia
+France,24,Europe
+Brazil,21,South America
+Canada,21,North America
 Spain,17,Europe
+Netherlands,16,Europe
+Mexico,14,North America
+New Zealand,14,Oceania
+Norway,14,Europe
+South Africa,14,Africa
+Italy,13,Europe
+Russia,12,Asia
+Argentina,11,South America
+South Korea,11,Asia
+Switzerland,10,Europe
+Chile,8,South America
+Indonesia,8,Asia
+Morocco,7,Africa
+Nigeria,7,Africa
+Algeria,6,Africa
+Austria,6,Africa
+Cuba,6,North America
+Jamaica,6,North America
+Malaysia,6,Asia
+Senegal,6,Africa
+Tanzania,6,Africa
+Belgium,5,Europe
+Denmark,5,Europe
+Ethiopia,5,Africa
+Ghana,5,Africa
+Pakistan,5,Asia
+Philippines,5,Asia
 Sudan,5,Africa
 Sweden,5,Europe
-Switzerland,10,Europe
-Thailand,5,Asia
-Tonga,1,Africa
-Trinidad and Tobago,2,North America
-Turkey,2,Asia
+Iran,4,Asia
+Thailand,4,Asia
+Zambia,4,Africa
+Bangladesh,3,Asia
+Colombia,3,South America
+Egypt,3,Africa
+Finland,3,Europe
+Greece,3,Europe
+Maldives,3,Asia
+Peru,3,South America
+Poland,3,Europe
 Uganda,3,Africa
 Ukraine,3,Europe
-United Kingdom,46,Europe
-Tanzania,6,Africa
-Uruguay,4,South America
-USA,75,North America
+Uruguay,3,South America
+Venezuela,3,South America
+Czech Republic,2,Europe
+Dominican Republic,2,North America
+Ecuador,2,South America
+Hungary,2,Europe
+Ireland,2,Europe
+Kenya,2,Africa
+Nepal,2,Asia
+Portugal,2,Europe
+Saudi Arabia,2,Asia
+Singapore,2,Asia
+Trinidad and Tobago,2,North America
+Turkey,2,Asia
+Bahamas,1,North America
+Benin,1,Africa
+Botswana,1,Africa
+Cameroon,1,Africa
+Cook Islands,1,Oceania
+Costa Rica,1,North America
+Eritrea,1,Africa
+Gambia,1,Africa
+Guatemala,1,North America
+Iceland,1,Europe
+Israel,1,Asia
+Latvia,1,Europe
+Madagascar,1,Africa
+Mauritania,1,Africa
+Mozambique,1,Africa
+Palau,1,Oceania
+Romania,1,Europe
+Serbia,1,Europe
+Solomon Islands,1,Oceania
+Sri Lanka,1,Asia
+Tonga,1,Africa
 Uzbekistan,1,Asia
-Venezuela,2,South America
-Zambia,4,Africa
 Zimbabwe,1,Africa
