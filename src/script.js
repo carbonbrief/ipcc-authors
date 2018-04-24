@@ -70,8 +70,8 @@ function bubbleChart() {
         var maxAmount = d3.max(rawData, function (d) { return +d.count; });
 
         var radiusScale = d3.scalePow()
-        .exponent(0.5)
-        .range([2, 27])
+        //.exponent(0.5)
+        .range([2, 40])
         .domain([0, maxAmount]);
 
         var myNodes = rawData.map(function (d) {
@@ -213,7 +213,7 @@ function bubbleChart() {
             var content = '<h3>' +
                         d.country +
                         '</h3>' +
-                        '<span class="name">Peak year: </span><span class="value">' +
+                        '<span class="name">Authors: </span><span class="value">' +
                         d.value +
                         '</span>';
 
