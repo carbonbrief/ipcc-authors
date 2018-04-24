@@ -59,3 +59,25 @@ h3 {
     margin-bottom: 5px;
     margin-top: 0px;
 }
+
+.top {
+    font-weight: bold;
+}
+
+#top-five {
+    position: absolute;
+    top: 340px;
+    left: 40px;
+}
+
+h2 { 
+    font-family: PT Sans; font-weight: bold; font-size: 16px; margin-bottom: 3px;
+}
+
+li {
+    font-family: PT Sans; font-size: 13.5px;
+}
+
+ol {
+    padding-left: 15px; margin-top: 10px;
+}
