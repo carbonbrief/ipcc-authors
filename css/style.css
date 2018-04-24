@@ -46,11 +46,11 @@ p {
     pointer-events: none;
 }
 
-.label {
+/* .bubble text {
     font: 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-anchor: middle;
     pointer-events: none;
-}
+} */
 
 h3 {
     font-family: PT Sans Narrow;

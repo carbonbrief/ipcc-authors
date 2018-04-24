@@ -108,7 +108,6 @@ function bubbleChart() {
         var bubblesE = bubbles.enter().append('circle')
         .classed('bubble', true)
         .attr('fill', function (d) { return fillColor(d.group); })
-        //.attr('stroke', function (d) { return d3.rgb(fillColor(d.group)).darker(); })
         .attr('r', 0)  // initial radius zero to allow transition
         .attr('class', function(d) { 
           return "bubble " + d.group 
@@ -147,17 +146,19 @@ function bubbleChart() {
         .duration(2000)
         .attr('r', function (d) { return d.radius; });
 
-        function addLabels (d) {
-            bubbles.append("text")
-            .text(function(d) { return d.country; })
-            .style("font-size", function(d) { return Math.min(2 * d.radius, (2 * d.radius - 8) / this.getComputedTextLength() * 24) + "px"; })
-            .attr("dy", ".35em");
-        }
+        // function addLabels (d) {
+        //     bubbles.append("text")
+        //     .classed()
+        //     .text(function(d) { return d.country; })
+        //     .style("font-size", function(d) { return Math.min(2 * d.radius, (2 * d.radius - 8) / this.getComputedTextLength() * 24) + "px"; })
+        //     .attr("dy", ".35em");
+        // }
 
         simulation.nodes(nodes);
 
         splitBubbles();
-        setTimeout(addLabels(), 2500);
+
+        // setTimeout(addLabels(), 2500);
         
 
     }
