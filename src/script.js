@@ -282,7 +282,7 @@ $("#selector").on("change", function() {
         $("#one").html('1. US: <span class="top" style="color: rgb(145, 64, 110)">74</span>');
         $("#two").html('2. UK: <span class="top" style="color: #0b4572">45</span>');
         $("#three").html('= Germany: <span class="top" style="color: #0b4572">45</span');
-        $("#four").html('3. Australia: <span class="top" style="color: #2983be">37</span>');
+        $("#four").html('4. Australia: <span class="top" style="color: #2983be">37</span>');
         $("#five").html('= China: <span class="top" style="color: #c27731">37</span>');
     } else if (this.value == "WG1") {
         // use .html() rather than .text() method since includes styling
@@ -290,19 +290,19 @@ $("#selector").on("change", function() {
         $("#two").html('2. UK: <span class="top" style="color: #0b4572">21</span>');
         $("#three").html('3. China: <span class="top" style="color: #c27731">14</span>');
         $("#four").html('= Germany: <span class="top" style="color: #0b4572">14</span>');
-        $("#five").html('4. Australia: <span class="top" style="color: #2983be">11</span>');
+        $("#five").html('5. Australia: <span class="top" style="color: #2983be">11</span>');
     } else if (this.value == "WG2") {
         $("#one").html('1. US: <span class="top" style="color: rgb(145, 64, 110)">31</span>');
         $("#two").html('2. Australia: <span class="top" style="color: #2983be">17</span>');
         $("#three").html('= Germany: <span class="top" style="color: #0b4572">17</span>');
-        $("#four").html('3. UK: <span class="top" style="color: #0b4572">15</span>');
-        $("#five").html('4. India: <span class="top" style="color: #c27731">13</span>');
+        $("#four").html('4. UK: <span class="top" style="color: #0b4572">15</span>');
+        $("#five").html('5. India: <span class="top" style="color: #c27731">13</span>');
     } else if (this.value == "WG3") {
         $("#one").html('1. US: <span class="top" style="color: rgb(145, 64, 110)">20</span>');
         $("#two").html('2. Germany: <span class="top" style="color: #0b4572">14</span>');
         $("#three").html('= Japan: <span class="top" style="color: #c27731">14</span>');
-        $("#four").html('3. China: <span class="top" style="color: #c27731">13</span>');
-        $("#five").html('4. India: <span class="top" style="color: #c27731">12</span>');
+        $("#four").html('4. China: <span class="top" style="color: #c27731">13</span>');
+        $("#five").html('5. India: <span class="top" style="color: #c27731">12</span>');
     } else {
         // do nothing
     }
