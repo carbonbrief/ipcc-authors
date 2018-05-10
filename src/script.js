@@ -263,6 +263,7 @@ d3.csv('data/All.csv', display);
 d3.select("#selector").on("change", selectGroup)
 
 function selectGroup() {
+
     var group = this.options[this.selectedIndex].value
 
     // remove old svg or draws below
