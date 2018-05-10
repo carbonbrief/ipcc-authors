@@ -10,8 +10,28 @@ h1 {
 }
 
 header {
-    margin-bottom: 0px;
+    margin-bottom: 15px;
     margin-left: 20px;
+}
+
+#dropdown {
+    margin-left: 20px;
+}
+
+select {
+    -webkit-appearance: none;
+   -moz-appearance: none;
+   background: url(https://s3-eu-west-1.amazonaws.com/cbbranding/new+folder/arrow-for-map.png) 96% / 15% no-repeat #ffffff;
+   background-size: 20px 13px;
+   border: 0px;
+   outline: 0px;
+   -webkit-box-shadow: 2px 3px 3px 2px rgba(102,102,102,0.1);
+   -moz-box-shadow: 2px 3px 3px 2px rgba(102,102,102,0.1);
+   box-shadow: 2px 3px 3px 2px rgba(102,102,102,0.1);
+}
+
+#selector {
+    width: 140px;
 }
 
 #bubble-chart {

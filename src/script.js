@@ -256,4 +256,28 @@ function display(error, data) {
 }
 
 // Load the data.
-d3.csv('data/authors.csv', display);
+d3.csv('data/All.csv', display);
+
+// Link behaviour to dropdown
+
+d3.select("#selector").on("change", selectGroup)
+
+function selectGroup() {
+    var group = this.options[this.selectedIndex].value
+
+    // remove old svg or draws below
+
+    d3.select("svg").remove();
+
+    d3.csv('data/' + group + '.csv', display);
+
+    console.log(group);
+}
+
+// reset dropdown on window reload
+
+$(document).ready(function () {
+    $("select").each(function () {
+        $(this).val($(this).find('option[selected]').val());
+    });
+})

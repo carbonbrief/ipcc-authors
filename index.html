@@ -6,12 +6,21 @@
         <meta name="description" content="Carbon Brief has mapped where the authors of the Intergovernmental Panel on Climate Change come from.">
         <meta name="author" content="Rosamund Pearce">
         <title>Where do IPCC authors come from? | Carbon Brief</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header>
-            <h1>Where do IPCC authors come from?</h1>            
+            <h1>Where do IPCC authors come from?</h1>          
         </header>
+        <div id='dropdown'>
+            <select id='selector'>
+                <option value='All' selected='selected'>All groups</option>
+                <option value='WG1'>Working group I</option>
+                <option value='WG2'>Working group II</option>
+                <option value='WG3'>Working group III</option>
+            </select>
+        </div>
         <div id="bubble-chart"></div>
         <div id="top-five">   
             <h2>Top five</h2>
@@ -22,7 +31,7 @@
                     <li>3. Australia: <span class="top" style="color: #2983be">37</span></li>
                     <li>= China: <span class="top" style="color: #c27731">37</span></li>
                 </ul>
-        </div>
+        </div> 
         <script src="https://d3js.org/d3.v4.min.js"></script>
         <script src="src/tooltip.js"></script>
         <script src="src/script.js"></script>
