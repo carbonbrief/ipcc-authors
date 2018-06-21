@@ -256,4 +256,64 @@ function display(error, data) {
 }
 
 // Load the data.
-d3.csv('data/authors.csv', display);
+d3.csv('data/All.csv', display);
+
+// Link behaviour to dropdown
+
+d3.select("#selector").on("change", selectGroup)
+
+function selectGroup() {
+
+    var group = this.options[this.selectedIndex].value
+
+    // remove old svg or draws below
+
+    d3.select("svg").remove();
+
+    d3.csv('data/' + group + '.csv', display);
+
+    console.log(group);
+}
+
+// Link top five to dropdown
+
+$("#selector").on("change", function() {
+    if (this.value == "All") {
+        $("#one").html('1. US: <span class="top" style="color: rgb(145, 64, 110)">74</span>');
+        $("#two").html('2. UK: <span class="top" style="color: #0b4572">45</span>');
+        $("#three").html('= Germany: <span class="top" style="color: #0b4572">45</span');
+        $("#four").html('4. Australia: <span class="top" style="color: #2983be">37</span>');
+        $("#five").html('= China: <span class="top" style="color: #c27731">37</span>');
+    } else if (this.value == "WG1") {
+        // use .html() rather than .text() method since includes styling
+        $("#one").html('1. US: <span class="top" style="color: rgb(145, 64, 110)">23</span>');
+        $("#two").html('2. UK: <span class="top" style="color: #0b4572">21</span>');
+        $("#three").html('3. China: <span class="top" style="color: #c27731">14</span>');
+        $("#four").html('= Germany: <span class="top" style="color: #0b4572">14</span>');
+        $("#five").html('5. Australia: <span class="top" style="color: #2983be">11</span>');
+    } else if (this.value == "WG2") {
+        $("#one").html('1. US: <span class="top" style="color: rgb(145, 64, 110)">31</span>');
+        $("#two").html('2. Australia: <span class="top" style="color: #2983be">17</span>');
+        $("#three").html('= Germany: <span class="top" style="color: #0b4572">17</span>');
+        $("#four").html('4. UK: <span class="top" style="color: #0b4572">15</span>');
+        $("#five").html('5. India: <span class="top" style="color: #c27731">13</span>');
+    } else if (this.value == "WG3") {
+        $("#one").html('1. US: <span class="top" style="color: rgb(145, 64, 110)">20</span>');
+        $("#two").html('2. Germany: <span class="top" style="color: #0b4572">14</span>');
+        $("#three").html('= Japan: <span class="top" style="color: #c27731">14</span>');
+        $("#four").html('4. China: <span class="top" style="color: #c27731">13</span>');
+        $("#five").html('5. India: <span class="top" style="color: #c27731">12</span>');
+    } else {
+        // do nothing
+    }
+})
+
+// reset dropdown on window reload
+
+$(document).ready(function () {
+    $("select").each(function () {
+        $(this).val($(this).find('option[selected]').val());
+    });
+})
+
+

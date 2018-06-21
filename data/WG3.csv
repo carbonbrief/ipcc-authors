@@ -1,0 +1,67 @@
+country,count,continent
+Belgium,1,Europe
+Colombia,1,South America
+Cook Islands,1,Oceania
+Costa Rica,1,North America
+Czech Republic,1,Europe
+Dominican Republic,1,North America
+Ecuador,1,South America
+Gambia,1,Africa
+Greece,1,Europe
+Iran,1,Asia
+Ireland,1,Europe
+Malaysia,1,Asia
+Morocco,1,Africa
+Nepal,1,Asia
+Pakistan,1,Asia
+Peru,1,South America
+Poland,1,Europe
+Portugal,1,Europe
+Serbia,1,Europe
+Singapore,1,Asia
+Switzerland,1,Europe
+Tanzania,1,Africa
+Thailand,1,Asia
+Tonga,1,Oceania
+Turkey,1,Asia
+Ukraine,1,Europe
+Venezuela,1,South America
+Zimbabwe,1,Africa
+Denmark,2,Europe
+Egypt,2,Africa
+Hungary,2,Europe
+Jamaica,2,North America
+Maldives,2,Asia
+Senegal,2,Africa
+Sweden,2,Europe
+Uganda,2,Africa
+Zambia,2,Africa
+Algeria,3,Africa
+Argentina,3,South America
+Chile,3,South America
+Ethiopia,3,Africa
+Ghana,3,Africa
+Indonesia,3,Asia
+Mexico,3,North America
+Republic of Korea,3,Asia
+Russia,3,Asia
+South Africa,3,Africa
+Sudan,3,Africa
+Austria,4,Europe
+Cuba,4,North America
+New Zealand,4,Oceania
+Nigeria,4,Africa
+Norway,4,Europe
+Canada,5,North America
+France,5,Europe
+Italy,5,Europe
+Netherlands,6,Europe
+Spain,6,Europe
+Australia,9,Oceania
+Brazil,9,South America
+UK,9,Europe
+India,12,Asia
+China,13,Asia
+Germany,14,Europe
+Japan,14,Asia
+USA,20,North America
